@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Счётчик калорий</title>
+</head>
+
+<body>
+    <main class="main">
+        <h1 class="main__title">Счётчик калорий</h1>
+        <form class="counter__colories">
+            <div class="container">
+                <h2 class="title">Пол</h2>
+                <div class="selection__gender">
+                    <button type="button" class="gender man checked">Мужчина</button>
+                    <button type="button" class="gender woman">Женщина</button>
+                </div>
+            </div>
+            <div class="container parameter">
+                <label>
+                    <h2 class="title">Возраст<strong class="title__strong">лет</strong></h2>
+                    <input class="input" id="age" type="number" min="0" placeholder="0">
+                </label>
+                <label class="title">
+                    <h2 class="title">Рост<strong class="title__strong">см</strong></h2> 
+                    <input class="input" id="height" type="number" min="0" placeholder="0">
+                </label>
+                <label class="title">
+                    <h2 class="title">Вес<strong class="title__strong">кг</strong></h2>
+                    <input class="input" id="weight" type="number" min="0" placeholder="0">
+                </label>
+            </div>
+            <div class="container">
+                <h2 class="title">Физическая активность</h2>
+                <div class="selection__activity">
+                    <label class="selection__text">
+                        <input type="radio" name="activity" value="minimal" checked>
+                        <b class="selection__title">Минимальная</b>
+                        <br>
+                        Сидячая работа и нет физической активности
+                    </label>
+                    <label class="selection__text">
+                        <input type="radio" name="activity" value="easy">
+                        <b class="selection__title">Низкая</b>
+                        <br>
+                        Редкие, нерегулярные тренировки, активность в быту
+                    </label>
+                    <label class="selection__text">
+                        <input type="radio" name="activity" value="medium">
+                        <b class="selection__title">Средняя</b>
+                        <br>
+                        Тренировки 3-5 раз в неделю
+                    </label>
+                    <label class="selection__text">
+                        <input type="radio" name="activity" value="hard">
+                        <b class="selection__title">Высокая</b>
+                        <br>
+                        Тренировки 6-7 раз в неделю
+                    </label>
+                    <label class="selection__text">
+                        <input type="radio" name="activity" value="maximum">
+                        <b class="selection__title">Очень высокая</b>
+                        <br>
+                        Больше 6 тренировок в неделю и физическая работа
+                    </label>
+                </div>
+            </div>
+            <div class="container__buttons">
+                <button type="button" class="button__submit">
+                    Рассчитать
+                </button>
+                <button class="button__reset" type="reset">
+                    <img src="./img/icon_reset.svg" width="15" height="15">
+                    Очистить поля и расчёт
+                </button>
+            </div>
+        </form>
+        <div class="container result hidden">
+            <h2 class="result__title">Ваша норма калорий:</h2>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
